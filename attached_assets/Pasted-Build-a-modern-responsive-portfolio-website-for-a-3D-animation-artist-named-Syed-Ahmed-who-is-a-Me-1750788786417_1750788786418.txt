@@ -1,0 +1,59 @@
+Build a modern, responsive portfolio website for a 3D animation artist named Syed Ahmed, who is a Media Science graduate from Bahria University and skilled in Blender, Adobe Animate, and Unreal Engine. The website should include the following sections:
+
+Landing Page: Hero section with a background animation or image related to 3D design. Include Syed’s name, title ("3D Animator | Media Science Student"), and location (Rawalpindi, Pakistan).
+
+About Me: A short bio using the professional summary:
+
+“Creative and detail-oriented 3D Animator skilled in Blender and Adobe Animate with a strong foundation in modeling, rigging, texturing, and storytelling. Graduated in Media Science with a specialization in digital media and animation. Internship experience at Telenor’s Goonj OTT platform. Currently learning Unreal Engine for real-time animation and game development.”
+
+Skills: A grid or list layout of Syed's technical and creative skills. Categories:
+
+Software: Blender, Adobe Animate, Adobe Premiere Pro, Unreal Engine (Beginner)
+
+Creative: 3D Modeling, Rigging, Storyboarding, Texturing, Lighting & Rendering, Composition
+
+Portfolio / Projects: Display 4 portfolio projects:
+
+3D Donut Animation (Blender) – Stylized donut animation with physics and lighting.
+
+3D Character Design (Blender) – Realistic humanoid model with sculpting and rigging.
+
+2D Animated Short (Adobe Animate) – Character animation with lip sync and audio timing.
+
+AI-Driven Brand Advertisement – Animated ad with neuromarketing research focus.
+
+Each project should have a card-style layout with:
+
+Thumbnail or placeholder image
+
+Title
+
+Short description
+
+Tools used
+
+Experience:
+
+Motion Graphics Intern – Goonj OTT (Telenor)
+July – October 2024
+Designed motion graphics, worked on social media campaigns, and aligned visuals with brand identity.
+
+Education:
+
+BS in Media Science, Bahria University (Graduated June 2025)
+
+Focus on animation, storytelling, and digital filmmaking.
+
+Contact Section: Email (Saabkz456@gmail.com), Phone (0315-5300073), and optional contact form.
+
+Design Requirements:
+
+Use a clean, professional, creative style suited to an animator (dark mode with neon or light accents recommended).
+
+Use animations/transitions subtly to highlight interactivity.
+
+Fully responsive (mobile and desktop).
+
+Include social icons (optional) for Behance, LinkedIn, or ArtStation.
+
+Use HTML, CSS (or Tailwind), and JavaScript or a framework like React if needed. Host-ready and easy to update.
