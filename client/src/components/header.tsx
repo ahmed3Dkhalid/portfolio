@@ -36,21 +36,23 @@ export default function Header() {
             onClick={() => scrollToSection('home')}
             whileHover={{ scale: 1.05 }}
           >
-            <i className="fas fa-search text-2xl text-primary"></i>
-            <span className="text-xl font-bold text-gray-900">VisualFind</span>
+            <i className="fas fa-cube text-2xl text-primary"></i>
+            <span className="text-xl font-bold text-foreground dark:text-foreground">Syed Ahmed</span>
           </motion.div>
           
           <div className="hidden md:flex items-center space-x-8">
             {[
               { label: 'Home', id: 'home' },
-              { label: 'Search', id: 'search' },
-              { label: 'Products', id: 'products' },
-              { label: 'About', id: 'about' }
+              { label: 'About', id: 'about' },
+              { label: 'Skills', id: 'skills' },
+              { label: 'Portfolio', id: 'portfolio' },
+              { label: 'Experience', id: 'experience' },
+              { label: 'Contact', id: 'contact' }
             ].map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-foreground/70 dark:text-foreground/70 hover:text-primary transition-colors font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -59,7 +61,7 @@ export default function Header() {
             ))}
           </div>
           
-          <button className="md:hidden text-gray-700">
+          <button className="md:hidden text-foreground dark:text-foreground">
             <i className="fas fa-bars text-xl"></i>
           </button>
         </div>

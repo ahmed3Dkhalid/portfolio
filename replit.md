@@ -1,8 +1,8 @@
-# VisualFind - AI-Powered Visual Search Platform
+# Syed Ahmed - 3D Animation Portfolio
 
 ## Overview
 
-VisualFind is a modern web application that revolutionizes product discovery through advanced visual search technology. Users can upload images to find visually similar products across multiple categories including fashion, home decor, electronics, and lifestyle items. The platform combines a React-based frontend with an Express.js backend, utilizing PostgreSQL for data persistence and implementing a comprehensive visual search system.
+A modern, responsive portfolio website for Syed Ahmed, a 3D animation artist and Media Science graduate from Bahria University. The website showcases his skills in Blender, Adobe Animate, and Unreal Engine, featuring his projects, experience, and professional background in an elegant, dark-themed design with subtle animations.
 
 ## System Architecture
 
