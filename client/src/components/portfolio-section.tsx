@@ -1,15 +1,28 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import donutVideo from "@assets/0001-0200_1753452735033.mp4";
+import mobileVideo from "@assets/video_1753452720213.mp4";
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tools: string[];
+  category: string;
+  image?: string;
+  video?: string;
+  features: string[];
+}
 
 export default function PortfolioSection() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "3D Donut Animation",
       description: "Stylized donut animation featuring advanced physics simulation, realistic lighting setup, and dynamic material properties. Created using Blender's Cycles engine.",
       tools: ["Blender", "Cycles Renderer", "Physics Simulation"],
       category: "3D Animation",
-      image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      video: donutVideo,
       features: ["Physics Simulation", "Realistic Lighting", "Material Design"]
     },
     {
@@ -32,12 +45,12 @@ export default function PortfolioSection() {
     },
     {
       id: 4,
-      title: "AI-Driven Brand Advertisement",
-      description: "Animated advertisement combining neuromarketing research with creative animation. Features data-driven design decisions and compelling visual storytelling.",
-      tools: ["Motion Graphics", "Research Analysis", "Brand Design"],
-      category: "Commercial Work",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      features: ["Neuromarketing", "Brand Identity", "Data Visualization"]
+      title: "Mobile Animation",
+      description: "Creative mobile device animation showcasing smooth motion graphics and interface transitions. Demonstrates expertise in modern digital animation techniques.",
+      tools: ["Motion Graphics", "Interface Design", "Animation Principles"],
+      category: "Motion Graphics",
+      video: mobileVideo,
+      features: ["Interface Animation", "Motion Design", "Digital Graphics"]
     }
   ];
 
@@ -70,13 +83,24 @@ export default function PortfolioSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              {/* Project Image */}
+              {/* Project Media */}
               <div className="relative overflow-hidden h-64">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                {project.video ? (
+                  <motion.video
+                    src={project.video}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Project Category Badge */}
@@ -86,11 +110,20 @@ export default function PortfolioSection() {
                   </span>
                 </div>
                 
+                {/* Video Indicator */}
+                {project.video && (
+                  <div className="absolute top-4 right-4">
+                    <div className="w-8 h-8 bg-black/50 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <i className="fas fa-play text-white text-sm"></i>
+                    </div>
+                  </div>
+                )}
+                
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button className="bg-white text-black hover:bg-gray-100 font-semibold">
-                    <i className="fas fa-play mr-2"></i>
-                    View Project
+                    <i className={`fas ${project.video ? 'fa-play' : 'fa-eye'} mr-2`}></i>
+                    {project.video ? 'Watch Video' : 'View Project'}
                   </Button>
                 </div>
               </div>

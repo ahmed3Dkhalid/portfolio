@@ -106,7 +106,12 @@ A modern, responsive portfolio website for Syed Ahmed, a 3D animation artist and
 
 ```
 Changelog:
-- June 24, 2025. Initial setup
+- January 25, 2025: Integrated user-uploaded video assets into portfolio
+  - Added 3D donut animation video to "3D Donut Animation" project
+  - Replaced "AI Driven Brand Advertisement" with "Mobile Animation" section
+  - Added mobile animation video to new Mobile Animation project
+  - Updated portfolio component to support both image and video media
+- June 24, 2025: Initial setup
 ```
 
 ## User Preferences
