@@ -5,13 +5,16 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig(async () => ({
+  // 👇 Set the correct base path for GitHub Pages
+  base: "/portfolio/",
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
     viteStaticCopy({
       targets: [
         {
-          // This will copy index.html to 404.html after build
+          // Copy index.html to 404.html to handle SPA routes
           src: path.resolve(__dirname, "dist/public/index.html"),
           dest: path.resolve(__dirname, "dist/public"),
           rename: "404.html",
@@ -29,6 +32,7 @@ export default defineConfig(async () => ({
         ]
       : []),
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
@@ -36,11 +40,14 @@ export default defineConfig(async () => ({
       "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
+
   root: path.resolve(__dirname, "client"),
+
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
+
   server: {
     fs: {
       strict: true,
